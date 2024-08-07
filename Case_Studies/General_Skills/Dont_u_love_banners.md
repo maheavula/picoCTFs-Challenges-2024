@@ -27,11 +27,11 @@ To connect to the running application use **nc tethys.picoctf.net 59985**. From 
 
 ![Banner5](https://github.com/user-attachments/assets/0291c5d2-fec1-4b2e-9845-99e5f02e0305)
 
-  - Basically I taught there would many top conferences but later I got to know that the top most is DEF CON.
+  - Basically I taught there would many top conferences but later I got to know that the top most is **DEF CON**.
 
 ![Banner6](https://github.com/user-attachments/assets/8a19d48e-909f-4992-abd0-e4823d34e7b9)
 
-  - After giving it, another question is posed like first hacker ever was known for phreaking, for this I got answer from internet, who was names as John Draper.
+  - After giving it, another question is posed like first hacker ever was known for phreaking, for this I got answer from internet, who was names as **John Draper**.
 
 ![Banner7](https://github.com/user-attachments/assets/1059f9af-2e02-4c10-9db3-a1cbe19b1ddf)
 
@@ -55,12 +55,25 @@ To connect to the running application use **nc tethys.picoctf.net 59985**. From 
   - Finally, after doing so much non sense in the terminal, I saw the hint..........Cheatingg right but hints are for given for solving right ?
 
   - **Do you know about symlinks?**
-  - 
+  - A symlink, or a symbolic link, is a file that points to another file or directory on your system. Think of it almost like a shortcut.
+
+  - Here it is how to create a symlinks, `ln -s /directory/file ./link file`.
+  - ln is the link command. The -s flag specifies that the link should be soft. -s can also be entered as -symbolic.
+  - By default, ln command creates hard links. The next argument is path to the file (or folder) that you want to link. (That is, the file or folder you want to create a shortcut for.)
+
+![Banner11](https://github.com/user-attachments/assets/9931cfd7-7089-4d5a-91b7-acc9fd4cdb01)
+
+  - Before creating link, remove the banner in user home directory and from there create the link which is `ln -s /root/flag.txt ./banner`.
+  - This is beacuse of as we dont have permission to open the banner file, we are linking to flag.txt file with banner to have sudo permissions.
+  - After doing symlink, try to open the banner file but still same banner results. So just tried with Netcat command from the beginning process.
+
+![Banner12](https://github.com/user-attachments/assets/4e31fc69-2332-4242-afd7-b1de3361f366)
+
+  - Finally we found the flag with Netcad command.
+  - The flag is `picoCTF{b4nn3r_gr4bb1n9_su((3sfu11y_a0e119d4}`.
 
 
-
-
-  - 
+     
 
 
 
